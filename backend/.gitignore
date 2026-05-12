@@ -1,0 +1,23 @@
+# Virtual Environment
+venv/
+backend/venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Node modules
+node_modules/
+
+# Environment files
+.env
+
+# Database
+*.db
+
+# Uploads
+uploads/
+
+# Build files
+dist/
+build/
