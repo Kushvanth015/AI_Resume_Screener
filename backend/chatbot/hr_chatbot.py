@@ -103,6 +103,39 @@ def hr_chatbot(query):
 
             f"{', '.join(best_candidate['skills'])}."
         )
+        
+    # NOT SHORTLISTED
+    if (
+        "who are not shortlisted" in query
+        or "not shortlisted candidates" in query
+        or "who are not shortlisted candidates" in query
+        or "who is not shortlisted" in query
+        or "who got not shortlisted" in query
+    ):
+
+        not_shortlisted = [
+
+            candidate["name"]
+
+            for candidate in analyzed_candidates
+
+            if candidate.get(
+            "status", ""
+            ).strip().lower() != "shortlisted"
+        ]
+
+        if len(not_shortlisted) == 0:
+
+            return (
+                "All candidates are shortlisted."
+            )
+
+        return (
+
+            "Not shortlisted candidates: "
+
+            + ", ".join(not_shortlisted)
+        )
 
     # SHORTLISTED
     if (
@@ -136,39 +169,6 @@ def hr_chatbot(query):
             "Shortlisted candidates: "
 
             + ", ".join(shortlisted)
-        )
-
-    # NOT SHORTLISTED
-    if (
-        "who are not shortlisted" in query
-        or "not shortlisted candidates" in query
-        or "who are not shortlisted candidates" in query
-        or "who is not shortlisted" in query
-        or "who got not shortlisted" in query
-    ):
-
-        not_shortlisted = [
-
-            candidate["name"]
-
-            for candidate in analyzed_candidates
-
-            if candidate.get(
-            "status", ""
-            ).strip().lower() != "shortlisted"
-        ]
-
-        if len(not_shortlisted) == 0:
-
-            return (
-                "All candidates are shortlisted."
-            )
-
-        return (
-
-            "Not shortlisted candidates: "
-
-            + ", ".join(not_shortlisted)
         )
         
     # REJECTED
