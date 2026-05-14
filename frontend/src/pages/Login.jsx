@@ -17,7 +17,7 @@ const Login = () => {
     try {
 
       const response = await fetch(
-        "https://airesumescreener-production-b6b3.up.railway.app/login",
+        "https://kushvanth05-ai-resume-screener.hf.space/login",
         {
           method: "POST",
 
