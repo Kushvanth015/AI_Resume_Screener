@@ -217,7 +217,7 @@ python app.py
 Backend runs on:
 
 ```bash
-http://127.0.0.1:5000
+https://ai-resume-screener-uhow.onrender.com
 ```
 
 ---

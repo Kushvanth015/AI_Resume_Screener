@@ -138,7 +138,7 @@ const Dashboard = () => {
       );
 
       const response = await fetch(
-        "http://127.0.0.1:5000/analyze-resumes",
+        "https://ai-resume-screener-uhow.onrender.com",
         {
           method: "POST",
           body: formData,
@@ -199,7 +199,7 @@ const Dashboard = () => {
     if (!query) return;
 
     const response = await fetch(
-      "http://127.0.0.1:5000/chat",
+      "https://ai-resume-screener-uhow.onrender.com/chat",
       {
         method: "POST",
 
