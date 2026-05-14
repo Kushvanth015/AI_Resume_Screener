@@ -138,7 +138,7 @@ const Dashboard = () => {
       );
 
       const response = await fetch(
-        "https://ai-resume-screener-uhow.onrender.com",
+        "https://your-backend-url.up.railway.app",
         {
           method: "POST",
           body: formData,
@@ -199,7 +199,7 @@ const Dashboard = () => {
     if (!query) return;
 
     const response = await fetch(
-      "https://ai-resume-screener-uhow.onrender.com/chat",
+      "https://your-backend-url.up.railway.app/chat",
       {
         method: "POST",
 

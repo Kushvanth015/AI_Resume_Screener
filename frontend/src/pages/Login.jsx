@@ -17,7 +17,7 @@ const Login = () => {
     try {
 
       const response = await fetch(
-        "https://ai-resume-screener-uhow.onrender.com",
+        "https://your-backend-url.up.railway.app/login",
         {
           method: "POST",
 

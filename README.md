@@ -217,7 +217,7 @@ python app.py
 Backend runs on:
 
 ```bash
-https://ai-resume-screener-uhow.onrender.com
+https://your-backend-url.up.railway.app
 ```
 
 ---

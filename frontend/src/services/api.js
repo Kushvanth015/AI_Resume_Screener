@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://ai-resume-screener-uhow.onrender.com",
+  baseURL: "https://your-backend-url.up.railway.app",
 });
 
 export default API;
