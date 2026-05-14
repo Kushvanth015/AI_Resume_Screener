@@ -138,7 +138,7 @@ const Dashboard = () => {
       );
 
       const response = await fetch(
-        "https://your-backend-url.up.railway.app",
+        "https://your-backend-url.up.railway.app/analyze-resumes",
         {
           method: "POST",
           body: formData,
