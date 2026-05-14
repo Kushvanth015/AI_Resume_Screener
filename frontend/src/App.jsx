@@ -21,49 +21,55 @@ function App() {
 
   return (
 
-      <AuthProvider>
+    <AuthProvider>
 
-        <BrowserRouter>
+      <BrowserRouter>
 
-          <Routes>
+        <Routes>
 
-            {/* Login Page */}
-            <Route
-              path="/login"
-              element={<Login />}
-            />
+          {/* Redirect root to login */ }
+          <Route
+            path="/"
+            element={<Navigate to="/login" />}
+          />
 
-            {/* Main Dashboard */}
-            <Route
-              path="/"
-              element={
-                <ProtectedRoute>
-                  <Dashboard />
-                </ProtectedRoute>
-              }
-            />
+          {/* Login Route */ }
+          <Route
+            path="/login"
+            element={<Login />}
+          />
 
-            {/* Admin Dashboard */}
-            <Route
-              path="/admin"
-              element={
-                <ProtectedRoute>
-                  <AdminDashboard />
-                </ProtectedRoute>
-              }
-            />
+          {/* Protected Dashboard Route */ }
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
 
-            {/* Redirect Unknown Routes */}
-            <Route
-              path="*"
-              element={<Navigate to="/" />}
-            />
+          {/* Protected Admin Dashboard Route */ }
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute>
+                <AdminDashboard />
+              </ProtectedRoute>
+            }
+          />
 
-          </Routes>
+          {/* Catch-all Route to redirect to login */ }
+          <Route
+            path="*"
+            element={<Navigate to="/login" />}
+          />
 
-        </BrowserRouter>
+        </Routes>
 
-      </AuthProvider>
+      </BrowserRouter>
+
+    </AuthProvider>
 
   );
 }
