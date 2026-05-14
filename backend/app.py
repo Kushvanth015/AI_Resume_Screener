@@ -15,7 +15,7 @@ from auth.auth_routes import auth_bp
 app = Flask(__name__)
 
 # Enable CORS
-CORS(app, origins=["https://your-frontend.vercel.app"])
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Upload Settings
 app.config['UPLOAD_FOLDER'] = 'uploads'
