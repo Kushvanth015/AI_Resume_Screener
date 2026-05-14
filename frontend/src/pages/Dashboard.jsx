@@ -138,7 +138,7 @@ const Dashboard = () => {
       );
 
       const response = await fetch(
-        "https://your-backend-url.up.railway.app/analyze-resumes",
+        "https://airesumescreener-production-b6b3.up.railway.app/analyze-resumes",
         {
           method: "POST",
           body: formData,
@@ -199,7 +199,7 @@ const Dashboard = () => {
     if (!query) return;
 
     const response = await fetch(
-      "https://your-backend-url.up.railway.app/chat",
+      "https://airesumescreener-production-b6b3.up.railway.app/chat",
       {
         method: "POST",
 

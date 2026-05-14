@@ -217,7 +217,7 @@ python app.py
 Backend runs on:
 
 ```bash
-https://your-backend-url.up.railway.app
+https://airesumescreener-production-b6b3.up.railway.app
 ```
 
 ---
